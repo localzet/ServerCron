@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'localzet/cron',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'localzet/cron' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+        'localzet/psr' => array(
+            'pretty_version' => 'v1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../localzet/psr',
+            'aliases' => array(),
+            'reference' => '104c2a987c09785c1ce3bf7addfc34274c025519',
+            'dev_requirement' => false,
+        ),
+        'localzet/server' => array(
+            'pretty_version' => 'v4.1.6',
+            'version' => '4.1.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../localzet/server',
+            'aliases' => array(),
+            'reference' => '9b5d7a7afadb83fb7268b6a76045d6f0ffd8db25',
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -1,0 +1,118 @@
+{
+    "packages": [
+        {
+            "name": "localzet/psr",
+            "version": "v1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localzet/PSR.git",
+                "reference": "104c2a987c09785c1ce3bf7addfc34274c025519"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localzet/PSR/zipball/104c2a987c09785c1ce3bf7addfc34274c025519",
+                "reference": "104c2a987c09785c1ce3bf7addfc34274c025519",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "time": "2023-08-16T20:55:44+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "localzet\\PSR\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Zorin",
+                    "email": "creator@localzet.com",
+                    "homepage": "https://github.com/localzet",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Localzet PSR Component for projects",
+            "keywords": [
+                "localzet",
+                "psr"
+            ],
+            "support": {
+                "email": "support@localzet.com",
+                "issues": "https://github.com/localzet/PSR/issues",
+                "source": "https://github.com/localzet/PSR"
+            },
+            "install-path": "../localzet/psr"
+        },
+        {
+            "name": "localzet/server",
+            "version": "v4.1.6",
+            "version_normalized": "4.1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localzet/Server.git",
+                "reference": "9b5d7a7afadb83fb7268b6a76045d6f0ffd8db25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localzet/Server/zipball/9b5d7a7afadb83fb7268b6a76045d6f0ffd8db25",
+                "reference": "9b5d7a7afadb83fb7268b6a76045d6f0ffd8db25",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "ext-sockets": "*",
+                "localzet/psr": ">=1.0",
+                "php": ">=8.2"
+            },
+            "suggest": {
+                "ext-ev": "For better performance",
+                "ext-event": "For better performance",
+                "ext-redis": "For Redis Session Handler",
+                "ext-uv": "For better performance",
+                "mongodb/mongodb": "For Mongo Session Handler"
+            },
+            "time": "2024-01-12T01:13:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "localzet\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Zorin",
+                    "email": "creator@localzet.com",
+                    "homepage": "https://www.localzet.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Localzet Server - Асинхронный event-based сервер на PHP.",
+            "homepage": "https://www.localzet.com/webcore",
+            "keywords": [
+                "localzet"
+            ],
+            "support": {
+                "email": "support@localzet.com",
+                "issues": "https://github.com/localzet/server/issues",
+                "source": "https://github.com/localzet/server"
+            },
+            "install-path": "../localzet/server"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

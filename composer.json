@@ -1,0 +1,26 @@
+{
+  "name": "localzet/cron",
+  "description": "",
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Ivan Zorin",
+      "email": "creator@localzet.com",
+      "homepage": "https://github.com/localzet"
+    }
+  ],
+  "support": {
+    "email": "support@localzet.com",
+    "source": "https://github.com/localzet/ServerCron"
+  },
+  "require": {
+    "php": ">=7.1",
+    "localzet/server": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "localzet\\": "./"
+    }
+  }
+}
