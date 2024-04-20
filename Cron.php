@@ -156,17 +156,17 @@ class Cron
                 $times = $parser->parse($rule);
                 $now = time();
                 foreach ($times as $time) {
-                    $t = $time-$now;
+                    $t = $time - $now;
                     if ($t <= 0) {
                         $t = 0.000001;
                     }
                     Timer::add($t, $cb, null, false);
                 }
             }
-            Timer::add(60 - time()%60, $callback, null, false);
+            Timer::add(60 - time() % 60, $callback, null, false);
         };
 
-        $next_time = time()%60;
+        $next_time = time() % 60;
         if ($next_time == 0) {
             $next_time = 0.00001;
         } else {
