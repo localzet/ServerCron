@@ -12,7 +12,7 @@
   ],
   "support": {
     "email": "support@localzet.com",
-    "source": "https://github.com/localzet/ServerCron"
+    "source": "https://github.com/localzet/Cron"
   },
   "require": {
     "php": ">=7.1",
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "localzet\\": "./"
+      "localzet\\": "src"
     }
   }
 }

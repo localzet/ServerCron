@@ -2,10 +2,9 @@
 
 namespace localzet;
 
-
 use InvalidArgumentException;
 
-class Parser
+class CronParser
 {
     /**
      * Находит следующее время выполнения, разбирая синтаксис crontab.
@@ -15,18 +14,18 @@ class Parser
      *   *    *    *    *    *    *
      *   -    -    -    -    -    -
      *   |    |    |    |    |    |
-     *   |    |    |    |    |    +----- day of week (0 - 6) (Воскресенье=0)
-     *   |    |    |    |    +----- month (1 - 12)
-     *   |    |    |    +------- day of month (1 - 31)
-     *   |    |    +--------- hour (0 - 23)
-     *   |    +----------- min (0 - 59)
-     *   +------------- sec (0-59)
+     *   |    |    |    |    |    +----- день недели (0 - 6) (Воскресенье=0)
+     *   |    |    |    |    +----- месяц (1 - 12)
+     *   |    |    |    +------- день (1 - 31)
+     *   |    |    +--------- час (0 - 23)
+     *   |    +----------- минута (0 - 59)
+     *   +------------- секунда (0-59)
      *
      * @param int|null $start_time
      * @return int[]
      * @throws InvalidArgumentException
      */
-    public function parse($crontab_string, $start_time = null)
+    public function parse(string $crontab_string, int $start_time = null): array
     {
         if (!$this->isValid($crontab_string)) {
             throw new InvalidArgumentException('Invalid cron string: ' . $crontab_string);

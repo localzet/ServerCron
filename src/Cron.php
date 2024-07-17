@@ -36,7 +36,7 @@ class Cron
      * @param callable $callback Функция обратного вызова для выполнения
      * @param string $name Имя задания cron
      */
-    public function __construct($rule, $callback, $name = '')
+    public function __construct(string $rule, callable $callback, string $name = '')
     {
         $this->_rule = $rule;
         $this->_callback = $callback;
@@ -51,7 +51,7 @@ class Cron
      *
      * @return string
      */
-    public function getRule()
+    public function getRule(): string
     {
         return $this->_rule;
     }
@@ -61,7 +61,7 @@ class Cron
      *
      * @return callable
      */
-    public function getCallback()
+    public function getCallback(): callable
     {
         return $this->_callback;
     }
@@ -71,7 +71,7 @@ class Cron
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->_name;
     }
@@ -81,7 +81,7 @@ class Cron
      *
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->_id;
     }
@@ -91,7 +91,7 @@ class Cron
      *
      * @return bool
      */
-    public function destroy()
+    public function destroy(): bool
     {
         return static::remove($this->_id);
     }
@@ -101,7 +101,7 @@ class Cron
      *
      * @return array
      */
-    public static function getAll()
+    public static function getAll(): array
     {
         return static::$_instances;
     }
@@ -112,7 +112,7 @@ class Cron
      * @param $id
      * @return bool
      */
-    public static function remove($id)
+    public static function remove($id): bool
     {
         if ($id instanceof Cron) {
             $id = $id->getId();
@@ -129,7 +129,7 @@ class Cron
      *
      * @return int
      */
-    protected static function createId()
+    protected static function createId(): int
     {
         static $id = 0;
         return ++$id;
@@ -145,8 +145,8 @@ class Cron
             return;
         }
         $inited = true;
-        $parser = new Parser();
-        $callback = function () use ($parser, &$callback) {
+        $callback = function () use (&$callback) {
+            $parser = new CronParser();
             foreach (static::$_instances as $crontab) {
                 $rule = $crontab->getRule();
                 $cb = $crontab->getCallback();
